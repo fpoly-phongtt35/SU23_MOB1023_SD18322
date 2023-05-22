@@ -8,6 +8,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -153,6 +154,11 @@ public class NguoiYeuForm extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tbNguoiYeu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tbNguoiYeuMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tbNguoiYeu);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -228,6 +234,18 @@ public class NguoiYeuForm extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void tbNguoiYeuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbNguoiYeuMouseClicked
+        // B1. Lấy bản ghi đang được chọn
+        int banGhiDuocChon = tbNguoiYeu.getSelectedRow(); // vị trí
+        
+        // B2. Đọc thông tin từng cột
+        String nickname = tbNguoiYeu.getValueAt(banGhiDuocChon, 0).toString();
+        
+        // B3. Đưa thông tin lên textfield tương ứng
+        txtNickname.setText(nickname);
+        
+    }//GEN-LAST:event_tbNguoiYeuMouseClicked
 
     /**
      * @param args the command line arguments
