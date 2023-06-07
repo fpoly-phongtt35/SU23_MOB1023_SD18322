@@ -133,6 +133,11 @@ public class NguoiYeuForm extends javax.swing.JFrame {
 
         btnThem.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnThem.setText("Thêm");
+        btnThem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnThemActionPerformed(evt);
+            }
+        });
 
         btnCapNhat.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnCapNhat.setText("Sửa");
@@ -246,6 +251,10 @@ public class NguoiYeuForm extends javax.swing.JFrame {
         txtNickname.setText(nickname);
         
     }//GEN-LAST:event_tbNguoiYeuMouseClicked
+
+    private void btnThemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnThemActionPerformed
 
     /**
      * @param args the command line arguments

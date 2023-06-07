@@ -4,11 +4,13 @@
  */
 package b4;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Phong
  */
-public class ToDo {
+public class ToDo implements Serializable {
     
     private String tenCongViec;
     private String deadline;
